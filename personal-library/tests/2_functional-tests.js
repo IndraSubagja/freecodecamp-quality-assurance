@@ -118,6 +118,7 @@ suite('Functional Tests', function() {
           assert.equal(res.status, 200);
           assert.equal(res.body._id, ID);
           assert.include(res.body.comments, "Test")
+          assert.equal(res.body.commentcount, 1)
           done();
         });
       });
