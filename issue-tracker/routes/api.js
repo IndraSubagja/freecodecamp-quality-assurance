@@ -87,7 +87,7 @@ module.exports = function (app, issueSchema) {
         res.json({
           error: 'missing _id'
         })
-      } else if(Object.keys(updateObj).length == 1) {
+      } else if(Object.keys(updateObj).length === 1) {
         res.json({
           error: 'no update field(s) sent', _id: _id
         })
