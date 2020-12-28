@@ -36,8 +36,8 @@ module.exports = function (app, Book) {
       //response will contain new book object including atleast _id and title
     })
     
-    .delete(function(req, res){
-      Book.deleteMany({}, (err, data) => {
+    .delete(async function(req, res){
+      await Book.deleteMany({}, (err, data) => {
         if(err) return console.error(err)
 
         res.json("complete delete successful")
