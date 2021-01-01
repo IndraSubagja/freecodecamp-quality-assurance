@@ -9,7 +9,6 @@ suite('UnitTests', () => {
 
   test('Valid puzzle string of 81 characters', (done) => {
     let puzzle = puzzleLibs[0][0]
-    console.log(solver.validate(puzzle))
     assert.isNotOk(solver.validate(puzzle))
     done()
   })
